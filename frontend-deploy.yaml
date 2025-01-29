@@ -21,4 +21,4 @@ spec:
         - containerPort: 3000
         env:
         - name: NEXT_PUBLIC_API_URL
-          value: "http://ab79d3f27e4a04aed98dbf794a74b366-411797331.ap-northeast-1.elb.amazonaws.com:8706"
+          value: "http://afd136a8e01d04d27847c807c5a6c275-435265856.ca-central-1.elb.amazonaws.com:8706"
