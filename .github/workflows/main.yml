@@ -78,16 +78,16 @@ jobs:
       
       run: |
           ssh -i ~/.ssh/canada.pem ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
-            rm -rf devops-final-project-ih
-            git clone https://github.com/NavinE360/devops-final-project-ih
+            rm -rf final_project_deveops
+            git clone https://github.com/NavinE360/final_project_deveops
           
-            cd devops-final-project-ih
+            cd final_project_deveops
           EOF
 
            
     - name: Deploy to EKS
       run: |
-          cd ~/devops-final-project-ih
+          cd ~/final_project_deveops
           kubectl apply -f backend-deploy.yaml
           kubectl apply -f backend-service.yml
           kubectl apply -f database-deploy.yaml
